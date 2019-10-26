@@ -1,8 +1,10 @@
 #pragma once
 #include <cmath>
 #include <utility>
+#include <vector>
 
 using std::pair;
+using std::vector;
 
 template<typename T>
 int f(T x) {
@@ -36,5 +38,5 @@ int f<char*>(char* s) {
 
 template<typename T, typename U>
 int f(pair<T, U> p) {
-	return pow(f<T>(p.first), f<U>(p.second));
+	return (int)pow(f<T>(p.first), f<U>(p.second));
 }
