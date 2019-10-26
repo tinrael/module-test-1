@@ -16,6 +16,8 @@ void printText(char* text) {
 
 int main()
 {
+	cout << "Every time function f() is called. Implementation differs due to type of the parameter." << endl;
+	cout << "Here some examples of usage." << endl << endl;
 	int n = 5;
 	cout << "Input: " << n << " | Result: " << f(n) << endl;
 	
