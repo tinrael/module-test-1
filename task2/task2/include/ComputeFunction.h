@@ -10,3 +10,23 @@ template<>
 int f<double>(double d) {
 	return (int)exp(1 / sin(d)) % 364;
 }
+
+template<>
+int f<char*>(char* s) {
+	int result = 0;
+
+	char vowels[] = "AaEeIiOoUuYy";
+	int size = sizeof(vowels) / sizeof(vowels[0]);
+	
+	int index = 0;
+	while (s[index] != '\0') {
+		for (int i = 0; i < size; i++) {
+			if (s[index] == vowels[i]) {
+				result++;
+				break;
+			}
+		}
+		index++;
+	}
+	return result;
+}
