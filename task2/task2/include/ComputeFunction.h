@@ -7,9 +7,24 @@ using std::pair;
 using std::vector;
 using std::size_t;
 
+int factorial(int n) {
+	if (n == 0) {
+		return 1;
+	}
+	return n * factorial(n - 1);
+}
+
 template<typename T>
 int f(T x) {
-	return 4;
+	return 1642;
+}
+
+template<>
+int f<int>(int n) {
+	if (n >= 0) {
+		return factorial(n) % 164;
+	}
+	return (int)pow(n, 3) % 264;
 }
 
 template<>
