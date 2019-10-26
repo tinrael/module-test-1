@@ -5,6 +5,7 @@
 
 using std::pair;
 using std::vector;
+using std::size_t;
 
 template<typename T>
 int f(T x) {
@@ -21,11 +22,11 @@ int f<char*>(char* s) {
 	int result = 0;
 
 	char vowels[] = "AaEeIiOoUuYy";
-	int size = sizeof(vowels) / sizeof(vowels[0]);
-	
+	size_t size = sizeof(vowels) / sizeof(vowels[0]);
+
 	int index = 0;
 	while (s[index] != '\0') {
-		for (int i = 0; i < size; i++) {
+		for (size_t i = 0; i < size; i++) {
 			if (s[index] == vowels[i]) {
 				result++;
 				break;
@@ -39,4 +40,13 @@ int f<char*>(char* s) {
 template<typename T, typename U>
 int f(pair<T, U> p) {
 	return (int)pow(f<T>(p.first), f<U>(p.second));
+}
+
+template<typename T>
+int f(vector<T>& v) {
+	int result = 0;
+	for (size_t i = 1; i < v.size(); i++) {
+		result += v[i] * v[i - 1];
+	}
+	return result;
 }
