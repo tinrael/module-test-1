@@ -53,8 +53,8 @@ int f<char*>(char* s) {
 }
 
 template<typename T, typename U>
-int f(pair<T, U> p) {
-	return (int)pow(f(p.first), f(p.second));
+int f(pair<T, U>* p) {
+	return (int)pow(f(p->first), f(p->second));
 }
 
 template<typename T>
