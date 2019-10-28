@@ -1,16 +1,16 @@
 #include "Base.h"
 
-int Base::n = 1;
+int Base::nextN = 1;
 
 Base::Base() {
-	id = n;
-	n++;
+	N = nextN;
+	nextN++;
 }
 
 Base::~Base() {
 
 }
 
-int Base::getId() {
-	return id;
+int Base::getN() {
+	return N;
 }

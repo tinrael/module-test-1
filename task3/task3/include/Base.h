@@ -4,10 +4,10 @@ class Base {
 public:
 	Base();
 	virtual ~Base() = 0;
-	int getId();
+	int getN();
 
 protected:
-	static int n;
-	int id = 0;
+	static int nextN;
+	int N = 0;
 };
 
