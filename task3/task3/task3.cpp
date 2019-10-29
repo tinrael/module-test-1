@@ -9,14 +9,16 @@ using std::endl;
 int main()
 {
 	Base* a = new Alpha();
+	a->subObjects[0] = new Beta();
+	a->subObjects[1] = new Gamma();
 	Base* b = new Beta();
 	Base* c = new Gamma();
-	Base* d = new Alpha();
-	vector<Base*> objects{a, b, c, d};
-	cout << "Predict S before deletion: " << Base::predictS(objects) << endl;
+	c->subObjects[0] = new Alpha();
+
+	vector<Base*> objects{a, b, c};
+	cout << "Predict S before deletion all objects: " << Base::predictS(objects) << endl;
 	delete a;
 	delete b;
 	delete c;
-	delete d;
-	cout << "S after deletion all objects: " << Base::getS() << endl;
+	cout << "S after deletion: " << Base::getS() << endl;
 }
