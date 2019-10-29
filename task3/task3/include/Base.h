@@ -1,4 +1,7 @@
 #pragma once
+#include <vector>
+
+using std::vector;
 
 class Base {
 public:
@@ -6,7 +9,9 @@ public:
 	virtual ~Base() = 0;
 	static int getS();
 	int getN();
-	virtual int changeS(int value);
+	virtual int changeS(int value) = 0;
+	int baseChangeS(int value);
+	static int predictS(const vector<Base*>& objects);
 
 protected:
 	static int nextN;

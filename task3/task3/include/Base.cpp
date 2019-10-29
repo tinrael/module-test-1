@@ -9,7 +9,7 @@ Base::Base() {
 }
 
 Base::~Base() {
-	S = changeS(S);
+	S = baseChangeS(S);
 }
 
 int Base::getS() {
@@ -20,6 +20,15 @@ int Base::getN() {
 	return N;
 }
 
-int Base::changeS(int value) {
+int Base::baseChangeS(int value) {
 	return value / 2 - 2 * N + 22;
+}
+
+int Base::predictS(const vector<Base*>& objects) {
+	int result = S;
+	for (Base* object : objects) {
+		result = object->changeS(result);
+		result = object->baseChangeS(result);
+	}
+	return result;
 }
