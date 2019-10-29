@@ -12,6 +12,11 @@ Base::~Base() {
 	S = S / 2 - 2 * N + 22;
 }
 
+int Base::getS()
+{
+	return S;
+}
+
 int Base::getN() {
 	return N;
 }

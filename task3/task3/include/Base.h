@@ -7,6 +7,7 @@ class Base {
 public:
 	Base();
 	virtual ~Base() = 0;
+	static int getS();
 	int getN();
 
 protected:
