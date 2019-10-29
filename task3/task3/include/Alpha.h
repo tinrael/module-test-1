@@ -2,6 +2,7 @@
 #include "Base.h"
 
 class Alpha : public Base {
-
+public:
+	~Alpha();
 };
 

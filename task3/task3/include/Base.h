@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+
+using namespace std;
 
 class Base {
 public:
@@ -8,6 +11,7 @@ public:
 
 protected:
 	static int nextN;
-	int N = 0;
+	static int S;
+	int N;
 };
 
