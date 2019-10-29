@@ -5,6 +5,8 @@ using std::vector;
 
 class Base {
 public:
+	const int NUMBER_OF_SUBOBJECTS = 2;
+	Base* subObjects[2];
 	Base();
 	virtual ~Base() = 0;
 	static int getS();
@@ -18,4 +20,3 @@ protected:
 	static int S;
 	int N;
 };
-
