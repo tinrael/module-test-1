@@ -4,5 +4,6 @@
 class Gamma : public Base {
 public:
 	~Gamma();
+	int changeS(int value) override;
 };
 

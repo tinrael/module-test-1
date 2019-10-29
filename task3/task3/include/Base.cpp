@@ -9,14 +9,17 @@ Base::Base() {
 }
 
 Base::~Base() {
-	S = S / 2 - 2 * N + 22;
+	S = changeS(S);
 }
 
-int Base::getS()
-{
+int Base::getS() {
 	return S;
 }
 
 int Base::getN() {
 	return N;
+}
+
+int Base::changeS(int value) {
+	return value / 2 - 2 * N + 22;
 }

@@ -4,5 +4,6 @@
 class Alpha : public Base {
 public:
 	~Alpha();
+	int changeS(int value) override;
 };
 

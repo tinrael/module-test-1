@@ -1,5 +1,9 @@
 #include "Beta.h"
 
 Beta::~Beta() {
-	S = S - 2 * N;
+	S = changeS(S);
+}
+
+int Beta::changeS(int value) {
+	return value - 2 * N;
 }

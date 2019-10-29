@@ -1,7 +1,4 @@
 #pragma once
-#include <iostream>
-
-using namespace std;
 
 class Base {
 public:
@@ -9,6 +6,7 @@ public:
 	virtual ~Base() = 0;
 	static int getS();
 	int getN();
+	virtual int changeS(int value);
 
 protected:
 	static int nextN;

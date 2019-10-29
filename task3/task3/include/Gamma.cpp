@@ -1,5 +1,9 @@
 #include "Gamma.h"
 
 Gamma::~Gamma() {
-	S = S + N - 22;
+	S = changeS(S);
+}
+
+int Gamma::changeS(int value) {
+	return value + N - 22;
 }
