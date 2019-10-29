@@ -11,9 +11,14 @@ int main()
 	Base* a = new Alpha();
 	a->subObjects[0] = new Beta();
 	a->subObjects[1] = new Gamma();
+	a->subObjects[1]->subObjects[0] = new Alpha();
+	
 	Base* b = new Beta();
+	
 	Base* c = new Gamma();
 	c->subObjects[0] = new Alpha();
+	c->subObjects[0]->subObjects[0] = new Gamma();
+	c->subObjects[0]->subObjects[1] = new Beta();
 
 	vector<Base*> objects{a, b, c};
 	cout << "Predict S before deletion all objects: " << Base::predictS(objects) << endl;
