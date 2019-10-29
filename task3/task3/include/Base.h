@@ -14,6 +14,7 @@ public:
 	virtual int changeS(int value) = 0;
 	int baseChangeS(int value);
 	static int predictS(const vector<Base*>& objects);
+	static int predictSingeObjectS(Base* object, int value);
 
 protected:
 	static int nextN;

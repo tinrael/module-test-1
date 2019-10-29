@@ -30,14 +30,19 @@ int Base::baseChangeS(int value) {
 int Base::predictS(const vector<Base*>& objects) {
 	int result = S;
 	for (Base* object : objects) {
-		result = object->changeS(result);
-		for (int i = 0; i < object->NUMBER_OF_SUBOBJECTS; i++) {
-			if (object->subObjects[i] != nullptr) {
-				result = object->subObjects[i]->changeS(result);
-				result = object->subObjects[i]->baseChangeS(result);
-			}
-		}
-		result = object->baseChangeS(result);
+		result = Base::predictSingeObjectS(object, result);
 	}
+	return result;
+}
+
+int Base::predictSingeObjectS(Base* object, int value) {
+	int result = value;
+	result = object->changeS(result);
+	for (int i = 0; i < object->NUMBER_OF_SUBOBJECTS; i++) {
+		if (object->subObjects[i] != nullptr) {
+			result = predictSingeObjectS(object->subObjects[i], result);
+		}
+	}
+	result = object->baseChangeS(result);
 	return result;
 }
