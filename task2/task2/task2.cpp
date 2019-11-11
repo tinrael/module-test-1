@@ -5,6 +5,8 @@
 
 using std::cout;
 using std::endl;
+using std::pair;
+using std::vector;
 
 void printText(char* text) {
 	int i = 0;
