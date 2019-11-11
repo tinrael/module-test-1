@@ -2,9 +2,11 @@
 #include "include/Beta.h"
 #include "include/Gamma.h"
 #include <iostream>
+#include <vector>
 
 using std::cout;
 using std::endl;
+using std::vector;
 
 int main()
 {
