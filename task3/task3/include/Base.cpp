@@ -15,16 +15,16 @@ Base::~Base() {
 	S = baseChangeS(S);
 }
 
-int Base::getS() {
-	return S;
+int Base::baseChangeS(int value) {
+	return value / 2 - 2 * N + 22;
 }
 
 int Base::getN() {
 	return N;
 }
 
-int Base::baseChangeS(int value) {
-	return value / 2 - 2 * N + 22;
+int Base::getS() {
+	return S;
 }
 
 int Base::predictS(const vector<Base*>& objects) {
