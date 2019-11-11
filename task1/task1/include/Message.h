@@ -16,6 +16,7 @@ private:
 public:
 	Message(Theme* theme, User* author, char* text);
 	Message(vector<Theme*> themes, User* author, char* text);
+	virtual ~Message();
 
 	void addTheme(Theme* theme);
 };
