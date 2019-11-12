@@ -24,7 +24,10 @@
     <ClCompile Include="include\User.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="include\Theme.cpp">
+    <ClCompile Include="include\Topic.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="include\Reaction.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +38,10 @@
     <ClInclude Include="include\Message.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="include\Theme.h">
+    <ClInclude Include="include\Topic.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Reaction.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
